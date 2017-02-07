@@ -1,2 +1,27 @@
 ﻿body {
+	background-color:violet;
+	align-self:center;
+}
+input {
+	border-radius:30px;
+}
+input.home_page {
+	background-color: cornflowerblue;
+	color:aliceblue;
+	font-size: xx-large;
+	border-style:hidden;
+	opacity:0.8;
+}
+h3 {
+	text-align:center;
+}
+h1 {
+	text-align:end;	
+}
+ul.middleList{
+	text-align:center;
+	list-style-type:none;	
+}
+li {
+	margin-bottom:10px;
 }
