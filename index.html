@@ -44,20 +44,20 @@
 				<strong>James</strong>
 			</li>
 			<li id="another_folder" class="side_bar_folder">
-				<button id="view_profile" class="side_bar_button">
+				<button id="view_profile" class="side_bar_button" onclick="changePageToMyProfile()">
 					View my profile
 				</button>
 				<br>
-				<button id="groups" class="side_bar_button">
+				<button id="groups" class="side_bar_button" onclick="changePageToGroups()">
 					Groups
 				</button>
 			</li>
 			<li id="settings_folder" class="side_bar_folder">
-				<button id="setting" class="side_bar_button">
+				<button id="setting" class="side_bar_button" onclick="changePageToSettings()">
 					Settings
 				</button>
 				<br>
-				<button id="log_off" class="side_bar_button">
+				<button id="log_off" class="side_bar_button" onclick="logOff()">
 					Log off
 				</button>
 			</li>
@@ -109,5 +109,26 @@
 			window.location.replace("add-new-contact.html");
 		}
 	</script>
+	<script type="text/javascript">
+		function changePageToMyProfile(){
+			window.location.replace("my-profile.html");
+		}
+	</script>
+	<script type="text/javascript">
+		function changePageToGroups(){
+			window.location.replace("groups.html");
+		}
+	</script>
+	<script type="text/javascript">
+		function changePageToSettings(){
+			window.location.replace("settings.html");
+		}
+	</script>
+	<script type="text/javascript">
+		function logOff(){
+			window.location.replace("log-off.html");
+		}
+	</script>
+
 </body>
 </html>
