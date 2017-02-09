@@ -24,7 +24,7 @@
 				<strong>Contacts</strong>
 			</li>
 			<li id="nav_bar_right">
-				<button id="log_off_button">
+				<button id="new_contact_button" onclick="changePageToNewContact()">
 					<strong>+</strong>
 				</button>
 			</li>
@@ -64,13 +64,33 @@
 		</ul>
 	</nav>
 	<main>
+		<ul id="contact_list">
+			<li class="contact_item">
+				<button id="Contacts1">
+					<img  class="contact_img" src="res/test_user_face.png">
+					<strong>Alice</strong>
+				</button>
+			</li>
+			<li class="contact_item">
+				<button id="Contacts2">
+					<img class="contact_img" src="res/test_user_face.png">
+					<strong>Cassie</strong>
+				</button>
+			</li>
+			<li class="contact_item">
+				<button id="Contacts3">
+					<img class="contact_img" src="res/test_user_face.png">
+					<strong>James</strong>
+				</button>
+			</li>
+			<li class="contact_item">
+				<button id="Contacts4">
+					<img class="contact_img" src="res/test_user_face.png">
+					<strong>Wade</strong>
+				</button>
+			</li>
+		</ul>
 	</main>
-<!-- 
-	<ul class="middleList">
-		<li><input class="home_page_button" id="View_Contacts" type="button" value="View Contacts" /></li>
-		<li><input class="home_page_button" id="Add_Contacts" type="button" value="Add Contacts" /></li>
-		<li><input class="home_page_button" id="View_My_Profile" type="button" value="View MyProfile" /></li>
-	</ul> -->
 	<script type="text/javascript">
 		function toggleSidebar(){
 			var $sideBar = $("#side_bar");
@@ -82,6 +102,11 @@
 				$sideBar.addClass("active");
 				$sideBarMask.fadeIn("fast");
 			}
+		}
+	</script>
+	<script type="text/javascript">
+		function changePageToNewContact(){
+			window.location.replace("add-new-contact.html");
 		}
 	</script>
 </body>

@@ -63,7 +63,7 @@ li {
 	margin-bottom: 6px;
 }
 
-#log_off_button{
+#new_contact_button{
 	background-color: transparent;
 	border-radius: 5px;
 	border: 1px solid black;
@@ -74,7 +74,7 @@ li {
 	-webkit-user-select: none;
 }
 
-#log_off_button:active{
+#new_contact_button:active{
 	background-color: rgba(150, 150, 150, 0.3);
 }
 #side_bar{
@@ -142,4 +142,34 @@ main {
 }
 .side_bar_button:active{
 	background-color: rgba(150, 150, 150, 0.3);
+}
+#contact_list{
+	list-style: none;
+	text-align: center;
+}
+
+.contact_item > button{
+	text-align: left;
+	width:75%;
+	background-color: transparent;
+	border-radius: 5px;
+	border: 1px solid black;
+	outline: none;
+	transition: all 0.2s;
+	-webkit-user-select: none;
+}
+.contact_item > button:active{
+	background-color: rgba(150, 150, 150, 0.3);
+}
+
+.contact_item > button > strong{
+	left:90px;
+	font-size: 30px;
+}
+
+.contact_img{
+	top:10px;
+	left: 10px;
+	max-width: 50px;
+	max-height: 50px;
 }
