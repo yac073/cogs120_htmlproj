@@ -66,25 +66,25 @@
 	<main>
 		<ul id="contact_list">
 			<li class="contact_item">
-				<button id="Contacts1">
+				<button id="Contacts1" onclick="changePageToContact(this)">
 					<img  class="contact_img" src="res/test_user_face.png">
 					<strong>Alice</strong>
 				</button>
 			</li>
 			<li class="contact_item">
-				<button id="Contacts2">
+				<button id="Contacts2" onclick="changePageToContact(this)">
 					<img class="contact_img" src="res/test_user_face.png">
 					<strong>Cassie</strong>
 				</button>
 			</li>
 			<li class="contact_item">
-				<button id="Contacts3">
+				<button id="Contacts3" onclick="changePageToContact(this)">
 					<img class="contact_img" src="res/test_user_face.png">
 					<strong>James</strong>
 				</button>
 			</li>
 			<li class="contact_item">
-				<button id="Contacts4">
+				<button id="Contacts4" onclick="changePageToContact(this)">
 					<img class="contact_img" src="res/test_user_face.png">
 					<strong>Wade</strong>
 				</button>
@@ -103,30 +103,30 @@
 				$sideBarMask.fadeIn("fast");
 			}
 		}
-	</script>
-	<script type="text/javascript">
+
 		function changePageToNewContact(){
 			window.location.replace("add-new-contact.html");
 		}
-	</script>
-	<script type="text/javascript">
+
 		function changePageToMyProfile(){
 			window.location.replace("my-profile.html");
 		}
-	</script>
-	<script type="text/javascript">
+
 		function changePageToGroups(){
 			window.location.replace("groups.html");
 		}
-	</script>
-	<script type="text/javascript">
+
 		function changePageToSettings(){
 			window.location.replace("settings.html");
 		}
-	</script>
-	<script type="text/javascript">
+
 		function logOff(){
 			window.location.replace("log-off.html");
+		}
+		function changePageToContact(elem){
+			var $buttonClicked = $(elem);
+			var name = $buttonClicked.children("strong").text();
+			window.location.href = "contact.html?name="+name;
 		}
 	</script>
 

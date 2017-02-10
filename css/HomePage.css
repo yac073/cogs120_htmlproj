@@ -145,13 +145,14 @@ main {
 }
 #contact_list{
 	list-style: none;
-	text-align: center;
+	align-items: center;
 }
 
 .contact_item > button{
 	text-align: left;
 	min-height: 70px;
 	width:75%;
+	margin: 0 auto;
 	background-color: transparent;
 	border-radius: 5px;
 	border: 1px solid black;
@@ -159,12 +160,15 @@ main {
 	outline: none;
 	transition: all 0.2s;
 	-webkit-user-select: none;
+	display:flex;
+	align-items: center;
 }
 .contact_item > button:active{
 	background-color: rgba(150, 150, 150, 0.3);
 }
 
 .contact_item > button > strong{
+	margin-left: 10px;
 	text-align: center;
 	font-size: 30px;
 }
