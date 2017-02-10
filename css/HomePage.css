@@ -151,6 +151,7 @@ main {
 .contact_item > button{
 	text-align: left;
 	min-height: 70px;
+	line-height: 50px;
 	width:75%;
 	margin: 0 auto;
 	background-color: transparent;
