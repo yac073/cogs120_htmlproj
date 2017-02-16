@@ -9,7 +9,18 @@
   		src="https://code.jquery.com/jquery-3.1.1.min.js"
   		integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   		crossorigin="anonymous"></script>
+  	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
 </head>
+
+<body>
+<script type="text/javascript">
+    $.getJSON("people.json", function(data) {
+        console.log(data);
+        $('body').append(data.person[0].name);
+    });
+</script>
+</body>
+
 <body>
 	<nav id="nav_bar">
 		<ul id="nav_bar_content">
@@ -32,6 +43,12 @@
 			</li>
 		</ul>
 	</nav>
+
+	<main>
+		<ul id="contact_info">
+			
+		</ul>
+	</main>
 	<script type="text/javascript">
 		function backToIndex(){
 			window.location.replace("index.html");
