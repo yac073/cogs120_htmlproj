@@ -24,7 +24,7 @@
 				<strong>Contacts</strong>
 			</li>
 			<li id="nav_bar_right">
-				<button id="new_contact_button" onclick="changePageToNewContact()">
+				<button id="new_contact_button" onclick="toggleNewContact()">
 					<strong>+</strong>
 				</button>
 			</li>
@@ -53,12 +53,29 @@
 				</button>
 			</li>
 			<li id="settings_folder" class="side_bar_folder">
-				<button id="setting" class="side_bar_button" onclick="changePageToSettings()">
+				<!-- <button id="setting" class="side_bar_button" onclick="changePageToSettings()">
 					Settings
 				</button>
-				<br>
+				<br> -->
 				<button id="log_off" class="side_bar_button" onclick="logOff()">
 					Log off
+				</button>
+			</li>
+		</ul>
+	</nav>
+
+	<div id="top_bar_mask" class="mask_top" hidden="hidden" onclick="toggleNewContact()"></div>
+
+	<nav  id="top_bar">
+		<ul id="top_bar_content">
+			<li id="add_people" class="top_bar_element">
+				<button class="top_bar_button" onclick="changePageToAdd()">
+					Add new contact
+				</button>
+			</li>
+			<li id="scan_QR" class="top_bar_element">
+				<button class="top_bar_button">
+					Scan QR code				
 				</button>
 			</li>
 		</ul>
@@ -95,17 +112,41 @@
 		function toggleSidebar(){
 			var $sideBar = $("#side_bar");
 			var $sideBarMask = $("#side_bar_mask");
+			var $topBar = $("#top_bar");
+			var $topBarMask = $("#top_bar_mask");
 			if ($sideBar.hasClass("active")){
 				$sideBar.removeClass("active");
 				$sideBarMask.fadeOut("fast");
 			}else{
+				if ($topBar.hasClass("active")){
+					$topBar.removeClass("active");
+					$topBarMask.fadeOut("fast");
+				}
 				$sideBar.addClass("active");
 				$sideBarMask.fadeIn("fast");
 			}
 		}
 
-		function changePageToNewContact(){
-			window.location.replace("add-new-contact.html");
+		function toggleNewContact(){
+			var $sideBar = $("#side_bar");
+			var $sideBarMask = $("#side_bar_mask");
+			var $topBar = $("#top_bar");
+			var $topBarMask = $("#top_bar_mask");
+			if ($topBar.hasClass("active")){
+				$topBar.removeClass("active");
+				$topBarMask.fadeOut("fast");
+			}else{
+				if ($sideBar.hasClass("active")){
+					$sideBar.removeClass("active");
+					$sideBarMask.fadeOut("fast");
+				}
+				$topBar.addClass("active");
+				$topBarMask.fadeIn("fast");
+			}
+		}
+
+		function changePageToAdd(){
+			window.location.replace("add-from-name.html");
 		}
 
 		function changePageToMyProfile(){

@@ -14,9 +14,7 @@
 	<nav id="nav_bar">
 		<ul id="nav_bar_content">
 			<li id="nav_bar_left">
-				<button id="back_button" class="click_button" onclick="backToIndex()">
-					<strong>Back</strong>
-				</button>
+				
 			</li>
 			<li id="nav_bar_middle">
 				<strong>Good bye</strong>
@@ -25,9 +23,17 @@
 			</li>
 		</ul>
 	</nav>
+	<main>
+		<p>
+			You have successfully logged off.
+		</p>
+		<button id="back_button" class="click_button" onclick="backToIndex()">
+			<strong>Log in</strong>
+		</button>
+	</main>
 	<script type="text/javascript">
 		function backToIndex(){
-			window.location.replace("index.html");
+			window.location.replace("welcome.html");
 		}
 	</script>
 	</body>

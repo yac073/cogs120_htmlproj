@@ -3,21 +3,28 @@ body {
 	margin:0;
 	background-color:white;
 	align-self:center;
+	text-align: center;
 }
 
 ul {
 	padding: 0;
 	margin: 0;
+	list-style: none;
 }
 
-ul.middleList{
-	text-align:center;
-	list-style-type:none;	
-}
 li {
 	margin-bottom:10px;
 }
 
+#nav_bar_middle{
+	width: 50%;
+	text-align: center;
+}
+
+#nav_bar_left{
+	width: 25%;
+	text-align:left;
+}
 #nav_bar{
 	position: fixed;
 	top:0;
@@ -28,6 +35,7 @@ li {
 	height: 50px;
 	z-index: 1024;
 }
+
 #nav_bar_content{
 	list-style: none;
 	display: flex;
@@ -35,15 +43,7 @@ li {
 	line-height: 30px;
 }
 
-#nav_bar_left{
-	width: 25%;
-	text-align:left;
-}
 
-#nav_bar_middle{
-	width: 50%;
-	text-align: center;
-}
 .click_button{
 	background-color: transparent;
 	border-radius: 5px;
@@ -62,9 +62,5 @@ li {
 main {
 	margin-top: 51px;
 	padding: 15px;
-	text-align: center;
-}
-
-p{
 	text-align: center;
 }
