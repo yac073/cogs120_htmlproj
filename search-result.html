@@ -41,10 +41,10 @@
 			var index = url.indexOf("?name=");
 			var name= url.substring(index+6);
         	for (i = 0; i < data.person.length; i++){
-        		console.log(data.person[i].name.includes(name));
+        		console.log(data.person[i].name.toLowerCase().includes(name.toLowerCase()));
         		if (data.person[i].name.includes(name)){
         			$("#result_list").append(
-        				'<li><button id="back_button" class="click_button" onclick="backToAddNewContactPage()">' + data.person[i].name + "</strong></li>"
+        				'<li><button id="back_button" class="name_button" onclick="backToAddNewContactPage()">' + data.person[i].name + "</strong></li>"
         			);
         		}
         	}
