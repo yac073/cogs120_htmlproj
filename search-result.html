@@ -41,7 +41,7 @@
         		console.log(data.person[i].name.includes(name));
         		if (data.person[i].name.includes(name)){
         			$('body').append(
-        				"<strong>" + data.person[i].name + "</strong>"
+        				"<button id=" + back_button + " class=" + click_button + " onclick=" + backToAddNewContactPage() + ">" + data.person[i].name + "</button>"
         			);
         		}
         	}
