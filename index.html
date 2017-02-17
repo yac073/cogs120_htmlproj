@@ -82,30 +82,6 @@
 	</nav>
 	<main>
 		<ul id="contact_list">
-			<li class="contact_item">
-				<button id="1" onclick="changePageToContact(this)">
-					<img  class="contact_img" src="res/test_user_face.png">
-					<strong>Alice</strong>
-				</button>
-			</li>
-			<li class="contact_item">
-				<button id="Contacts2" onclick="changePageToContact(this)">
-					<img class="contact_img" src="res/test_user_face.png">
-					<strong>Cassie</strong>
-				</button>
-			</li>
-			<li class="contact_item">
-				<button id="Contacts3" onclick="changePageToContact(this)">
-					<img class="contact_img" src="res/test_user_face.png">
-					<strong>James</strong>
-				</button>
-			</li>
-			<li class="contact_item">
-				<button id="Contacts4" onclick="changePageToContact(this)">
-					<img class="contact_img" src="res/test_user_face.png">
-					<strong>Wade</strong>
-				</button>
-			</li>
 		</ul>
 	</main>
 	<script type="text/javascript">
@@ -174,7 +150,7 @@
         	var i;
         	for (i = 0; i < data.person.length; i++){
         		$("#contact_list").append(
-        			'<li class="contact_item"><button id="' + data.person[i].id + '" onclick="requestAddToContact(this)"><img  class="contact_img" src="' + data.person[i].imageURL + '"><strong>'+ data.person[i].name+'</strong></button></li>'
+        			'<li class="contact_item"><button id="' + data.person[i].id + '" onclick="changePageToContact(this)"><img  class="contact_img" src="' + data.person[i].imageURL + '"><strong>'+ data.person[i].name+'</strong></button></li>'
         		);
         	}
     	});
