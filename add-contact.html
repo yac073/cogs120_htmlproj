@@ -30,12 +30,13 @@
 	</nav>
 
 	<main>
-		<ul id="contact_info">
+		<ul id="my_contact">
+			dummy my contact
 		</ul>
 	</main>
 	<script type="text/javascript">
 		function backToIndex(){
-			window.location.replace("index.html");
+			window.location.replace("add-new_contact.html");
 		}
 		$.getJSON("people.json", function(data) {
         	console.log(data);
@@ -46,8 +47,7 @@
 			var $profile_name = $("#profile_name");
         	for (i = 0; i < data.person.length; i++){
         		if (data.person[i].id == id){
-        			$('body').append(data.person[i].name);
-        			$profile_name.text("Adding" + data.person[i].name);
+        			$profile_name.text("Adding " + data.person[i].name);
         		}
         	}
     	});
