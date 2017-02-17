@@ -44,6 +44,9 @@ li {
 	width: 50%;
 	text-align: center;
 }
+#frm1{
+	margin-top: 100px
+}
 .click_button{
 	background-color: transparent;
 	border-radius: 5px;
