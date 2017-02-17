@@ -44,11 +44,16 @@
         		console.log(data.person[i].name.toLowerCase().includes(name.toLowerCase()));
         		if (data.person[i].name.includes(name)){
         			$("#result_list").append(
-        				'<li class="contact_item"><button id="Contacts1" onclick="changePageToContact(this)"><img  class="contact_img" src="' + data.person[i].imageURL + '"><strong>'+ data.person[i].name+'</strong></button></li>'
+        				'<li class="contact_item"><button id="Contacts1" onclick="requestAddToContact(this)"><img  class="contact_img" src="' + data.person[i].imageURL + '"><strong>'+ data.person[i].name+'</strong></button></li>'
         			);
         		}
         	}
     	});
+    	function requestAddToContact(this){
+    		var $buttonClicked = $(elem);
+			var name = $buttonClicked.children("strong").text();
+			window.location.href = "contact.html?name="+name;
+    	}
 	</script>
 	</body>
 </html>
