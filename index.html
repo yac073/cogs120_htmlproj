@@ -83,7 +83,7 @@
 	<main>
 		<ul id="contact_list">
 			<li class="contact_item">
-				<button id="Contacts1" onclick="changePageToContact(this)">
+				<button id="1" onclick="changePageToContact(this)">
 					<img  class="contact_img" src="res/test_user_face.png">
 					<strong>Alice</strong>
 				</button>
@@ -166,8 +166,8 @@
 		}
 		function changePageToContact(elem){
 			var $buttonClicked = $(elem);
-			var name = $buttonClicked.children("strong").text();
-			window.location.href = "contact.html?name="+name;
+			var id = $buttonClicked.id;
+			window.location.href = "contact.html?id="+id;
 		}
 	</script>
 

@@ -20,11 +20,18 @@
 				</button>
 			</li>
 			<li id="nav_bar_middle">
-				<strong>
+				<strong id="profile_name">
 					<script type="text/javascript">
 							var url = window.location.href;
-							var index = url.indexOf("?name=");
-							var name= url.substring(index+6);
+							var index = url.indexOf("?id=");
+							var name= url.substring(index+4);
+							var $profile_name = $("#profile_name");
+							var i;
+							for (i = 0; i < data.person.length; i++){
+        						if (data.person[i].id.equals(id)){
+        							$profile_name.text(data.person[i].name);
+        						}
+        					}
 							document.write(name);
 					</script>
 				</strong>
@@ -46,10 +53,10 @@
         	console.log(data);
         	var i;
         	var url = window.location.href;
-			var index = url.indexOf("?name=");
-			var name= url.substring(index+6);
+			var index = url.indexOf("?id=");
+			var id= url.substring(index+4);
         	for (i = 0; i < data.person.length; i++){
-        		if (data.person[i].name.includes(name)){
+        		if (data.person[i].id.equals(id)){
         			$('body').append(data.person[i].name);
         		}
         	}
