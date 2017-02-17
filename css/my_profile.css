@@ -13,6 +13,7 @@ body {
 ul {
 	padding: 0;
 	margin: 0;
+	list-style: none;
 }
 
 ul.middleList{
@@ -55,7 +56,7 @@ li {
 }
 
 .edit_button{
-	width: 87%;
+	width: 100%;
 	background-color: transparent;
 	border-radius: 5px;
 	border: 1px solid black;

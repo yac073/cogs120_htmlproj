@@ -38,7 +38,7 @@
 			var index = url.indexOf("?name=");
 			var name= url.substring(index+6);
         	for (i = 0; i < data.person.length; i++){
-        		if (data.person[i].includes(name)){
+        		if (data.person[i].name.includes(name)){
         			$('body').append(data.person[i].name);
         		}
         	}
