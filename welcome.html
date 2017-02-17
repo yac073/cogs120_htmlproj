@@ -26,7 +26,7 @@
 	<main>
 		<ul id="login_package">
 			<li>
-				<button class="click_button" onclick="">
+				<button class="click_button" onclick="createAccountPage()">
 					<strong>Create an account</strong>
 				</button>
 			</li>
@@ -38,6 +38,9 @@
 		</ul>
 	</main>
 	<script type="text/javascript">
+		function createAccountPage(){
+			window.location.replace("create-account.html");
+		}
 		function backToAddContactPage(){
 			window.location.replace("index.html");
 		}
