@@ -28,7 +28,7 @@
 	<main>
 		<ul id="search_package">
 			<li>
-				<input id="search_str" type="text" name="" placeholder="Enter username or account number">
+				<input id="search_str" type="text" name="" placeholder="Enter username or account number" value="">
 			</li>
 			<li>
 				<button class="search_button" onclick="searchResult()">
@@ -42,8 +42,9 @@
 			window.location.replace("index.html");
 		}
 		function searchResult(){
-			var $buttonClicked = $("#search_str");
-			var name = $buttonClicked.text();
+			var $buttonClicked = document.getElementById('search_str');
+			var name = $buttonClicked.value;
+			console.log($buttonClicked.value);
 			window.location.href = "search-result.html?name="+name;
 		}
 	</script>

@@ -26,7 +26,6 @@
 		</ul>
 	</nav>
 	<main>
-
 	</main>
 	<script type="text/javascript">
 		function backToAddNewContactPage(){
@@ -34,7 +33,15 @@
 		}
 		$.getJSON("search_result.json", function(data) {
         	console.log(data);
-        	$('body').append(data.person[0].name);
+        	var i;
+        	var url = window.location.href;
+			var index = url.indexOf("?name=");
+			var name= url.substring(index+6);
+        	for (i = 0; i < data.person.length; i++){
+        		if (data.person[i].includes(name)){
+        			$('body').append(data.person[i].name);
+        		}
+        	}
     	});
 	</script>
 	</body>
