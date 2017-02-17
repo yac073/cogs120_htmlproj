@@ -49,7 +49,7 @@
         		}
         	}
     	});
-    	function requestAddToContact(this){
+    	function requestAddToContact(elem){
     		var $buttonClicked = $(elem);
 			var name = $buttonClicked.children("strong").text();
 			window.location.href = "contact.html?name="+name;
