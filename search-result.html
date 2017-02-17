@@ -40,7 +40,9 @@
         	for (i = 0; i < data.person.length; i++){
         		console.log(data.person[i].name.includes(name));
         		if (data.person[i].name.includes(name)){
-        			$('body').append(data.person[i].name);
+        			$('body').append(
+        				"<strong>" + data.person[i].name + "</strong>"
+        			);
         		}
         	}
     	});
