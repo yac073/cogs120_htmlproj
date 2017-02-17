@@ -28,10 +28,10 @@
 	<main>
 		<ul id="search_package">
 			<li>
-				<input type="text" name="" placeholder="Enter username or account number">
+				<input id="search_str" type="text" name="" placeholder="Enter username or account number">
 			</li>
 			<li>
-				<button class="search_button" onclick="">
+				<button class="search_button" onclick="searchResult()">
 					<strong>Search</strong>
 				</button>
 			</li>
@@ -40,6 +40,11 @@
 	<script type="text/javascript">
 		function backToAddContactPage(){
 			window.location.replace("index.html");
+		}
+		function searchResult(){
+			var $buttonClicked = $("#search_str");
+			var name = $buttonClicked.text();
+			window.location.href = "search-result.html?name="+name;
 		}
 	</script>
 	</body>
