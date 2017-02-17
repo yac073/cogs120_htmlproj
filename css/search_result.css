@@ -84,3 +84,44 @@ main {
 	margin-top: 251px;
 	padding: 15px;
 }
+
+#result_list{
+	list-style: none;
+	align-items: center;
+}
+.contact_item{
+	margin-bottom: 5px;
+}
+.contact_item > button{
+	text-align: left;
+	min-height: 30px;
+	line-height: 25px;
+	width:100%;
+	margin: 0 auto;
+	background-color: transparent;
+	border-radius: 2px;
+	border-top:0;
+	border-right: 0;
+	border-left: 0;
+	border-bottom: 1px solid black;
+	padding: 5px;
+	outline: none;
+	transition: all 0.2s;
+	-webkit-user-select: none;
+	display:flex;
+	align-items: center;
+}
+.contact_item > button:active{
+	background-color: rgba(150, 150, 150, 0.3);
+}
+
+.contact_item > button > strong{
+	margin-left: 10px;
+	text-align: center;
+	font-size: 15px;
+}
+
+.contact_img{
+	max-width: 25px;
+	max-height: 25px;
+}

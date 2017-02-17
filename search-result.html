@@ -46,6 +46,9 @@
         			$("#result_list").append(
         				'<li><button id="back_button" class="name_button" onclick="backToAddNewContactPage()">' + data.person[i].name + "</strong></li>"
         			);
+        			$("#result_list").append(
+        				'<li class="contact_item"><button id="Contacts1" onclick="changePageToContact(this)"><img  class="contact_img" src="' + data.person[i].imageURL + '"><strong>'+ data.person[i].name+'</strong></button></li>'
+        			);
         		}
         	}
     	});
