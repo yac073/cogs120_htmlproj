@@ -26,6 +26,9 @@
 		</ul>
 	</nav>
 	<main>
+		<ul id="result_list">
+
+		</ul>
 	</main>
 	<script type="text/javascript">
 		function backToAddNewContactPage(){
@@ -40,8 +43,8 @@
         	for (i = 0; i < data.person.length; i++){
         		console.log(data.person[i].name.includes(name));
         		if (data.person[i].name.includes(name)){
-        			$('body').append(
-        				'<button id="back_button" class="click_button" onclick="backToAddNewContactPage()">' + data.person[i].name + "</strong>"
+        			$("#result_list").append(
+        				'<li><button id="back_button" class="click_button" onclick="backToAddNewContactPage()">' + data.person[i].name + "</strong></li>"
         			);
         		}
         	}
