@@ -43,7 +43,7 @@ li {
 }
 
 #nav_bar_middle{
-	width: 95%;
+	width: 100%;
 	text-align: center;
 }
 .click_button{
@@ -66,7 +66,7 @@ li {
 	align-items: center;
 }
 input{
-	width: 80%;
+	width: calc(100% - 20px);
 	height: 38px;
 	background-color: transparent;
 	border-radius: 5px;
@@ -77,7 +77,7 @@ input{
 	text-align: center;
 }
 .login_button{
-	width: 80%;
+	width: 100%;
 	background-color: transparent;
 	border-radius: 5px;
 	border: 1px solid black;
@@ -89,7 +89,7 @@ input{
 }
 
 .create_button{
-	width: 80%;
+	width: 100%;
 	background-color: transparent;
 	border-radius: 5px;
 	border: 1px solid black;

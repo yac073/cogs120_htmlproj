@@ -37,10 +37,7 @@
 	<main>
 		<ul id="contact_info">
 			<script type="text/javascript">
-    			$.getJSON("people.json", function(data) {
-        		console.log(data);
-        		$('body').append(data.person[0].name);
-    			});
+    			
 			</script>
 		</ul>
 	</main>
@@ -48,6 +45,10 @@
 		function backToIndex(){
 			window.location.replace("index.html");
 		}
+		$.getJSON("people.json", function(data) {
+        	console.log(data);
+        	$('body').append(data.person[0].name);
+    	});
 	</script>
 	</body>
 </html>

@@ -64,7 +64,7 @@ li {
 	align-items: center;
 }
 input{
-	width: 80%;
+	width: calc(100% - 20px);
 	height: 48px;
 	background-color: transparent;
 	border-radius: 5px;
@@ -75,7 +75,7 @@ input{
 	text-align: center;
 }
 .search_button{
-	width: 87%;
+	width: 100%;
 	background-color: transparent;
 	border-radius: 5px;
 	border: 1px solid black;
